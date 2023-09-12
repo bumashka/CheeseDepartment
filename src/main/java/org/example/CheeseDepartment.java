@@ -1,10 +1,6 @@
 package org.example;
 
 public class CheeseDepartment {
-
-    final int MAX_NUMBER_OF_CUSTOMERS = 15;
-
-    private int number_of_customers;
     public CheeseDepartment() {
     }
 
@@ -29,7 +25,7 @@ public class CheeseDepartment {
         callNewCustomer(customer.getType(), customer.getOrder());
     }
 
-    public void callNewCustomer(CustomerType type, int order) throws InterruptedException {
+    public void callNewCustomer(CustomerType type, int order){
         Customer customer = new Customer(this, type, order);
         System.out.println(type.toString() + " customer " + customer.getName() +
                 " has entered the Cheese Department.");
